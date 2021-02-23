@@ -38,7 +38,7 @@ export default function HookForm() {
 				</FormErrorMessage>
 			</FormControl>
 			<Box boxSize="sm">
-				<Image src="./img/JustCausesCover.png" alt="Just causes" />
+				<Image src="./img/Just Causes Cover.png" alt="Just causes" />
 			</Box>
 			<Button
 				mt={4}
