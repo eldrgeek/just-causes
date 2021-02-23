@@ -22,12 +22,14 @@ export default function HookForm() {
 	// }
 
 	function onSubmit(values) {
-		return new Promise((resolve) => {
-			setTimeout(() => {
-				alert(JSON.stringify(values, null, 2));
-				resolve();
-			}, 3000);
-		});
+		window.location.href = 'https://revolution1x1.org';
+
+		// return new Promise((resolve) => {
+		// 	setTimeout(() => {
+		// 		alert(JSON.stringify(values, null, 2));
+		// 		resolve();
+		// 	}, 3000);
+		// });
 	}
 
 	return (
@@ -37,16 +39,17 @@ export default function HookForm() {
 					{errors.name && errors.name.message}
 				</FormErrorMessage>
 			</FormControl>
-			<Box boxSize="sm">
+
+			<Box m={2} boxSize="xl">
 				<Image src="./img/Just Causes Cover.png" alt="Just causes" />
 			</Box>
 			<Button
-				mt={4}
+				mt={1}
 				colorScheme="teal"
 				isLoading={formState.isSubmitting}
 				type="submit"
 			>
-				Give me my button
+				I want to start a revolution
 			</Button>
 		</form>
 	);
