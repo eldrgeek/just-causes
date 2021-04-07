@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import HookForm from './HookForm';
-import { ChakraProvider, CSSReset, Box } from '@chakra-ui/react';
+import { ChakraProvider, CSSReset, Center } from '@chakra-ui/react';
 
 function App() {
 	return (
 		<ChakraProvider>
 			<CSSReset />
-			<Box p={4}>
+			<Center m="auto" p={4} maxW={700}>
 				<HookForm />
-			</Box>
+			</Center>
 		</ChakraProvider>
 	);
 }

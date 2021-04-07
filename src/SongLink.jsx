@@ -21,7 +21,7 @@ export default function SongLink({ title, author, pub, charity, link }) {
 				<Text ml={4} mr={2} fontSize="l">
 					{charity}{' '}
 				</Text>
-				<Link href={link} fontSize="l">
+				<Link href={'https://' + link} fontSize="l">
 					{' '}
 					{link}
 				</Link>

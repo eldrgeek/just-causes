@@ -5,11 +5,15 @@ import {
 	// FormLabel,
 	FormControl,
 	Box,
+	Center,
 	// Input,
 	Button,
 	Image
 } from '@chakra-ui/react';
-
+import TextPage from './TextPage';
+const Fallback = () => {
+	return <Image src="./img/jc-cover-125.png" alt="Just causes" />;
+};
 export default function HookForm() {
 	const { handleSubmit, errors, formState } = useForm();
 
@@ -39,18 +43,38 @@ export default function HookForm() {
 					{errors.name && errors.name.message}
 				</FormErrorMessage>
 			</FormControl>
-
-			<Box m={2} boxSize="xl">
-				<Image src="./img/Just Causes Cover.png" alt="Just causes" />
-			</Box>
-			<Button
-				mt={1}
-				colorScheme="teal"
-				isLoading={formState.isSubmitting}
-				type="submit"
-			>
-				I want to start a revolution
-			</Button>
+			<Center>
+				<Box m={2} maxW={700}>
+					<Image
+						fallback={<Fallback />}
+						src="./img/JCMed.png"
+						alt="Just causes"
+					/>
+				</Box>
+			</Center>
+			<Center>
+				<Button
+					my={5}
+					colorScheme="teal"
+					isLoading={formState.isSubmitting}
+					type="submit"
+				>
+					I want to start a revolution
+				</Button>
+			</Center>
+			<TextPage />
+			<Center width="100%" maxW="900px">
+				<iframe
+					position="absolute"
+					display="block"
+					id="inlineFrameExample"
+					title="Inline Frame Example"
+					width="100%"
+					height="1000px"
+					maxWidth="700px"
+					src="https://justcauses.hearnow.com/"
+				/>
+			</Center>
 		</form>
 	);
 }
